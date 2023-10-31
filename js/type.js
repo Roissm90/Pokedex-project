@@ -1,29 +1,35 @@
-const div$$ = document.querySelector('#containerName');
-const divName$$ = document.getElementById('pokedexName');
-const inputName = document.querySelector('#searchName');
-const inputNumber = document.querySelector('#searchNumber');
-const inputType = document.querySelector('#searchType');
-const searchName = document.querySelector('#searchNameButton');
-const baseUrl = 'https://pokeapi.co/api/v2/pokemon/';
-const numberOfPokemon = 151;
+//Buscador de tipos
+const buttonsType = Array.from(document.getElementById('buttonsType').children);
+const pokedexType$$ = document.querySelector('#pokedexType');
+const removeTypes$$ = document.querySelector('#btnToRemoveType');
 
-searchName.addEventListener('click', pokedexName);
+for (let i = 0; i < buttonsType.length; i++) {
+    buttonsType[i].addEventListener('click', () => pokedexType(i));
+}
 
-async function pokedexName(){
-    const valueInputName = inputName.value.toLowerCase();
-    let url = baseUrl + valueInputName;
-    if(valueInputName !== '') {
+async function pokedexType(index) {
+    const matchingPokemon = []; // Crear una lista para los Pokémon que coincidan con el tipo
+    for (let i = 0; i < numberOfPokemon; i++) {
+        let url = baseUrl + (i + 1);
         try {
             const response = await fetch(url);
             const result = await response.json();
-            pokemonDataName(result);
+            if (pokemonMatchesType(result.types, buttonsType[index].classList)) {
+                matchingPokemon.push(result); // Agregar Pokémon a la lista
+            }
         } catch (error) {
             console.error(error);
         }
     }
+
+    // Mostrar detalles de todos los Pokémon que coincidan con el tipo
+    matchingPokemon.forEach(function (pokemon) {
+        pokemonDataType(pokemon);
+    });
+    console.log(matchingPokemon);
 }
 
-function pokemonDataName(result) {
+function pokemonDataType(result) {
     const pokemon = {
         namePokemon: result.name,
         imageFront: result.sprites['front_default'],
@@ -38,11 +44,19 @@ function pokemonDataName(result) {
         weight: result.weight
     };
     console.log(pokemon);
-    addElementsPokemonName(pokemon);
+    addElementsPokemonType(pokemon);
 }
-function addElementsPokemonName(pokemon) {
+
+function pokemonMatchesType(types, typeClassList) {
+    return types.some(function (type) {
+        return typeClassList.contains(type.type.name);
+    });
+}
+
+function addElementsPokemonType(pokemon) {
     //Crear elementos HTML y su contenido
-    divName$$.innerHTML = ''; //reiniciar el contenido del div
+    const containerCard = document.createElement('div');
+    containerCard.classList.add('container-card')
     const containerImages = document.createElement('div');
     containerImages.classList.add('container-images');
     const imgFront = document.createElement('img');
@@ -73,9 +87,13 @@ function addElementsPokemonName(pokemon) {
     const liWeight = document.createElement('li');
     liWeight.textContent = `Peso: ${pokemon.weight} Kg`;
     ul.appendChild(liWeight);
-    // Agregar elementos al contenedor ol$$
-    divName$$.appendChild(containerImages);
-    divName$$.appendChild(h2);
-    divName$$.appendChild(ul);
+    // Agregar elementos al contenedor pokedexType$$
+    containerCard.appendChild(containerImages);
+    containerCard.appendChild(h2);
+    containerCard.appendChild(ul);
+    pokedexType$$.appendChild(containerCard);
 }
 
+removeTypes$$.addEventListener('click', function() {
+    pokedexType$$.innerHTML = '';
+})

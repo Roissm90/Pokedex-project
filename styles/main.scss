@@ -4,3 +4,102 @@
     box-sizing: border-box;
 }
 
+$color-principal: #e80f0f;
+
+@import 'name.scss';
+@import 'types.scss';
+
+.container-title {
+    width: 100%;
+    max-width: 600px;
+    height: 80px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $color-principal;
+
+    div.container__div-circles {
+        width: 200px;
+        height: 80px;
+
+        position: relative;
+
+        a:first-child {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 15px;
+            left: 60px;
+
+            div {
+                width: 50px;
+                height: 50px;
+                background-color: blue;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        div:nth-child(2) {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            border: 1px solid black;
+            position: absolute;
+            top: 15px;
+            left: 160px;
+        }
+
+        div:nth-child(3) {
+            width: 20px;
+            height: 20px;
+            background-color: yellow;
+            border-radius: 50%;
+            border: 1px solid black;
+            position: absolute;
+            top: 15px;
+            left: 200px;
+        }
+
+        div:last-child {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            border-radius: 50%;
+            border: 1px solid black;
+            position: absolute;
+            top: 15px;
+            left: 240px;
+        }
+    }
+
+    .title {
+        width: calc(100% - 100px);
+        height: 100px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 50px;
+        display: none;
+    }    
+}
+
+.separator {
+    width: 100%;
+    max-width: 600px;
+    height: 2px;
+    background-color: black;
+    margin: 0 auto;
+}

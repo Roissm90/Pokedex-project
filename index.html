@@ -9,13 +9,57 @@
 </head>
 
 <body>
-
-    <div class="container">
-        <h1>Pokedex</h1>
-        <ol id="pokedex"></ol>
+    <div class="container-title">
+        <div class="container__div-circles">
+            <a href="" class="circle-1">
+                <div></div>
+            </a>
+            <div class="circle-2"></div>
+            <div class="circle-3"></div>
+            <div class="circle-4"></div>
+        </div>
+        <h1 class="title">Pokédex</h1>
     </div>
-
+    <div class="separator"></div>
+    <div class="containerName">
+        <div>
+            <img src="assets/logo.png" alt="logo de pokemon">
+        </div>
+        <div>
+            <label for="searchName"></label>
+            <input type="text" id="searchName" placeholder="Ej: Pikachu o Nº">
+            <button type="button" id="searchNameButton">BUSCAR</button>
+        </div>
+        <div id="pokedexName"></div>
+    </div>
+    <div class="containerType">
+        <div id="buttonsType">
+            <button class="steel" id="buttonSteel">ACERO</button>
+            <button class="water" id="buttonWater">AGUA</button>
+            <button class="bug" id="buttonBug">BICHO</button>
+            <button class="dragon" id="buttonDragon">DRAGÓN</button>
+            <button class="electric" id="buttonElectric">ELÉCTRICO</button>
+            <button class="ghost" id="buttonGhost">FANTASMA</button>
+            <button class="fire" id="buttonFire">FUEGO</button>
+            <button class="fairy" id="buttonFairy">HADA</button>
+            <button class="ice" id="buttonIce">HIELO</button>
+            <button class="fighting" id="buttonFight">LUCHA</button>
+            <button class="normal" id="buttonNormal">NORMAL</button>
+            <button class="grass" id="buttonGrass">PLANTA</button>
+            <button class="psychic" id="buttonPsychic">PSÍQUICO</button>
+            <button class="rock" id="buttonRock">ROCA</button>
+            <button class="ground" id="buttonEarth">TIERRA</button>
+            <button class="poison" id="buttonPoison">VENENO</button>
+            <button class="flying" id="buttonFlying">VOLADOR</button>
+        </div>
+        <div class="separator-2"></div>
+        <div  class="pokedex-type" id="pokedexType"></div>
+        <button id="btnToRemoveType" class="remove-list">
+            <img src="assets/poke-ball.png" alt="" id="pokeBall">
+        </button>
+    </div>
     <script src="js/main.js" defer></script>
+    <script src="js/type.js" defer></script>
 </body>
 
 </html>
