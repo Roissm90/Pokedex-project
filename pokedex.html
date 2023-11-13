@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="pokedex">
+    <nav class="text-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pokedex.html">Pokédex</a></li>
+            <li><a href="games.html">Juegos</a></li>
+        </ul>
+    </nav>
+    <div class="container-title">
+        <div class="container__div-circles">
+            <a href="" class="circle-1">
+                <div></div>
+            </a>
+            <div class="circle-2"></div>
+            <div class="circle-3"></div>
+            <div class="circle-4"></div>
+        </div>
+        <h1 class="title">Pokédex</h1>
+    </div>
+    <div class="containerName">
+        <div>
+            <img src="./assets/logo.png" alt="logo de pokemon">
+        </div>
+        <div>
+            <label for="searchName"></label>
+            <input type="text" id="searchName" placeholder="Ej: Pikachu o Nº">
+            <button type="button" id="searchNameButton">ENTER</button>
+        </div>
+        <div id="pokedexName"></div>
+        <a href="types.html">Filtrar por tipo</a>
+        <a href="allpokemon.html">Ver todos</a>
+    </div>
+    <footer>
+        <ul class="container-links">
+            <li class="link-home"><a href="index.html"><img src="./assets/bg-index.webp" alt=""></a></li>
+            <li class="link-git"><a href="https://github.com/roissm90"><img src="./assets/icon-git.png" alt=""></a></li>
+        </ul>
+    </footer>
+    <script src="./js/main.js" defer></script>
+</body>
+
+</html>

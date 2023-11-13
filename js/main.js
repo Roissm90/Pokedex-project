@@ -61,13 +61,12 @@ function addElementsPokemonName(pokemon) {
     ul.appendChild(liNumber);
     pokemon.type.forEach(function (type) {
         const liType = document.createElement('li');
-        liType.textContent = `Tipo: ${type}`;
+        liType.textContent = `Tipo: ${type.charAt(0).toUpperCase() + type.slice(1)}`;
         ul.appendChild(liType);
     })
     pokemon.abilities.forEach(function (ability) {
         const liAbilities = document.createElement('li');
-        liAbilities.textContent = '';
-        liAbilities.textContent = `Habilidad: ${ability}`;
+        liAbilities.textContent = `Habilidad: ${ability.charAt(0).toUpperCase() + ability.slice(1)}`;
         ul.appendChild(liAbilities);
     });
     const liWeight = document.createElement('li');

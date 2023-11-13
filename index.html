@@ -3,63 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex</title>
+    <title>Pokémon</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="container-title">
-        <div class="container__div-circles">
-            <a href="" class="circle-1">
-                <div></div>
-            </a>
-            <div class="circle-2"></div>
-            <div class="circle-3"></div>
-            <div class="circle-4"></div>
-        </div>
-        <h1 class="title">Pokédex</h1>
-    </div>
-    <div class="separator"></div>
-    <div class="containerName">
-        <div>
-            <img src="assets/logo.png" alt="logo de pokemon">
-        </div>
-        <div>
-            <label for="searchName"></label>
-            <input type="text" id="searchName" placeholder="Ej: Pikachu o Nº">
-            <button type="button" id="searchNameButton">BUSCAR</button>
-        </div>
-        <div id="pokedexName"></div>
-    </div>
-    <div class="containerType">
-        <div id="buttonsType">
-            <button class="steel" id="buttonSteel">ACERO</button>
-            <button class="water" id="buttonWater">AGUA</button>
-            <button class="bug" id="buttonBug">BICHO</button>
-            <button class="dragon" id="buttonDragon">DRAGÓN</button>
-            <button class="electric" id="buttonElectric">ELÉCTRICO</button>
-            <button class="ghost" id="buttonGhost">FANTASMA</button>
-            <button class="fire" id="buttonFire">FUEGO</button>
-            <button class="fairy" id="buttonFairy">HADA</button>
-            <button class="ice" id="buttonIce">HIELO</button>
-            <button class="fighting" id="buttonFight">LUCHA</button>
-            <button class="normal" id="buttonNormal">NORMAL</button>
-            <button class="grass" id="buttonGrass">PLANTA</button>
-            <button class="psychic" id="buttonPsychic">PSÍQUICO</button>
-            <button class="rock" id="buttonRock">ROCA</button>
-            <button class="ground" id="buttonEarth">TIERRA</button>
-            <button class="poison" id="buttonPoison">VENENO</button>
-            <button class="flying" id="buttonFlying">VOLADOR</button>
-        </div>
-        <div class="separator-2"></div>
-        <div  class="pokedex-type" id="pokedexType"></div>
-        <button id="btnToRemoveType" class="remove-list">
-            <img src="assets/poke-ball.png" alt="" id="pokeBall">
-        </button>
-    </div>
-    <script src="js/main.js" defer></script>
-    <script src="js/type.js" defer></script>
+    <main class="main-index">
+        <nav class="text-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pokedex.html">Pokédex</a></li>
+                <li><a href="games.html">Juegos</a></li>
+            </ul>
+        </nav>
+        <nav class="images-nav">
+            <ul>
+                <li><a href="pokedex.html" data-aos="zoom-in"><img src="./assets/pokedex.png" alt=""></a></li>
+                <li><a href="games.html" data-aos="zoom-in"><img src="./assets/stadium.png" alt=""></a></li>
+            </ul>
+        </nav>
+    </main>
+    <footer>
+        <ul class="container-links">
+            <li class="link-home"><a href="index.html"><img src="./assets/bg-index.webp" alt=""></a></li>
+            <li class="link-git"><a href="https://github.com/roissm90"><img src="./assets/icon-git.png" alt=""></a></li>
+        </ul>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
-
-</html>
