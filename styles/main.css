@@ -147,6 +147,7 @@
 }
 .pokedex .containerName > div:first-child > img {
   width: 90%;
+  filter: grayscale(50%);
 }
 .pokedex .containerName div:nth-child(2) {
   width: 350px;
@@ -189,7 +190,7 @@
   color: #f00;
 }
 .pokedex .containerName div:nth-child(3) {
-  width: 350px;
+  width: 90%;
   border-radius: 10px;
   background-color: #353535;
   display: flex;
@@ -201,21 +202,18 @@
   font-weight: bold;
 }
 .pokedex .containerName div:nth-child(3) h2 {
-  width: 100%;
   display: flex;
   justify-content: flex-start;
-  padding-left: 100px;
   font-size: 24px;
+  padding-top: 10px;
 }
 .pokedex .containerName div:nth-child(3) ul {
   list-style: none;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
   align-items: flex-start;
-  padding-left: 100px;
   padding-bottom: 20px;
 }
 .pokedex .containerName > a {

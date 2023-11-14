@@ -73,8 +73,8 @@ function addElementsPokemonName(pokemon) {
     liWeight.textContent = `Peso: ${pokemon.weight} Kg`;
     ul.appendChild(liWeight);
     // Agregar elementos al contenedor ol$$
-    divName$$.appendChild(containerImages);
     divName$$.appendChild(h2);
+    divName$$.appendChild(containerImages);
     divName$$.appendChild(ul);
 }
 
