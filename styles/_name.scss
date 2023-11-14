@@ -8,10 +8,14 @@
     gap: 50px;
     padding-bottom: 200px;
 
+    background-image: url('../assets/bg-index.gif');
+    background-position: center;
+    background-size: cover;
+
     nav.text-nav {
         width: 100%;
         height: 100px;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0);
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -48,9 +52,9 @@
     }
 
     .container-title {
-        width: 100%;
-        max-width: 600px;
-        height: 100px;
+        width: 80%;
+        max-width: 500px;
+        height: 50px;
         margin: 0 auto;
         display: flex;
         justify-content: flex-start;
@@ -60,14 +64,14 @@
         border-bottom: none;
     
         div.container__div-circles {
-            width: 200px;
-            height: 80px;
+            width: 80px;
+            height: 30px;
     
             position: relative;
     
             a:first-child {
-                width: 60px;
-                height: 60px;
+                width: 30px;
+                height: 30px;
                 background-color: white;
                 border-radius: 50%;
                 border: 2px solid black;
@@ -75,12 +79,12 @@
                 justify-content: center;
                 align-items: center;
                 position: absolute;
-                top: 15px;
-                left: 60px;
+                top: 5px;
+                left: 30px;
     
                 div {
-                    width: 50px;
-                    height: 50px;
+                    width: 25px;
+                    height: 25px;
                     background-color: blue;
                     border-radius: 50%;
                     position: absolute;
@@ -92,36 +96,36 @@
             }
     
             div:nth-child(2) {
-                width: 20px;
-                height: 20px;
+                width: 15px;
+                height: 15px;
                 background-color: red;
                 border-radius: 50%;
                 border: 1px solid black;
                 position: absolute;
-                top: 15px;
-                left: 160px;
+                top: 5px;
+                left: 70px;
             }
     
             div:nth-child(3) {
-                width: 20px;
-                height: 20px;
+                width: 15px;
+                height: 15px;
                 background-color: yellow;
                 border-radius: 50%;
                 border: 1px solid black;
                 position: absolute;
-                top: 15px;
-                left: 200px;
+                top: 5px;
+                left: 90px;
             }
     
             div:last-child {
-                width: 20px;
-                height: 20px;
+                width: 15px;
+                height: 15px;
                 background-color: green;
                 border-radius: 50%;
                 border: 1px solid black;
                 position: absolute;
-                top: 15px;
-                left: 240px;
+                top: 5px;
+                left: 110px;
             }
         }
     
@@ -131,21 +135,21 @@
     }
 
     .containerName {
-        width: 100%;
-        max-width: 600px;
+        width: 80%;
+        max-width: 500px;
         margin: -50px auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 40px;
+        justify-content: space-around;
+        gap: 20px;
         align-items: center;
         background-color: #353535bf;
-        padding: 100px 0;
+        padding: 30px 0;
         border: 2px solid #000;
     
         > div:first-child {
-            width: 350px;
-            height: 100px;
+            width: 200px;
+            height: 80px;
     
             display: flex;
             justify-content: center;
@@ -172,11 +176,11 @@
                 height: 50px;
         
                 border-radius: 10px;
-                border: 3px solid rgb(213, 163, 0);
+                border: none;
                 outline: none;
-                background-color: #353535;
+                background-color: #fff;
                 padding-left: 20px;
-                color: #fff;
+                color: #f00;
                 font-size: 16px;
                 font-weight: bold;
             }
@@ -187,12 +191,18 @@
         
                 border-radius: 50%;
                 outline: none;
-                border: 3px solid rgb(213, 163, 0);
-                background-color: #353535;
+                border: none;
+                background-color: #000;
                 cursor: pointer;
                 color: #fff;
                 font-size: 10px;
                 font-weight: bold;
+                transition: all ease 1s;
+
+                &:hover {
+                    box-shadow: inset 0 100px 0 0 #d3d3d3;
+                    color: #f00;
+                }
             }
         }
     
@@ -230,10 +240,11 @@
         }
     
         > a {
-            color: rgb(213, 163, 0);
+            color: rgb(203, 0, 0);
             text-decoration: none;
             font-size: 16px;
-            background-color: #00000050;
+            font-weight: bold;
+            background-color: #fff;
             width: 150px;
             height: 50px;
             border-radius: 15px;

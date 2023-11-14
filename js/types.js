@@ -8,9 +8,9 @@ for (let i = 0; i < buttonsType$$.length; i++) {
     buttonsType$$[i].addEventListener('click', () => {
     const selectedType = buttonsType$$[i].classList;
     pokedexType$$.style.height = '470px';
-    pokedexType$$.style.border = '5px solid rgba(195, 195, 195, 0.7)';
+    pokedexType$$.style.border = '5px solid rgb(203, 0, 0)';
     pokedexType$$.style.borderRadius = '20px';
-    pokedexType$$.style.backgroundColor = 'rgba(135, 135, 135, 0.7)';
+    pokedexType$$.style.backgroundColor = 'rgb(255, 255, 255)';
     fetchPokemonApi(selectedType);
   });
 }

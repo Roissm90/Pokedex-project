@@ -1,9 +1,6 @@
-const btnShowAll$$ = document.getElementById('showAll');
 const mainAll$$ = document.getElementById('mainAll');
 const baseUrl = 'https://pokeapi.co/api/v2/pokemon/';
 const numberOfPokemon = 151;
-
-btnShowAll$$.addEventListener('click', fecthApi);
 
 async function fecthApi() {
     mainAll$$.innerHTML = '';
@@ -15,6 +12,8 @@ async function fecthApi() {
         console.log(result);
     }
 }
+
+fecthApi();
 
 function getInfo(result) {
     const pokemon = {

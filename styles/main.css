@@ -13,11 +13,14 @@
   align-items: center;
   gap: 50px;
   padding-bottom: 200px;
+  background-image: url("../assets/bg-index.gif");
+  background-position: center;
+  background-size: cover;
 }
 .pokedex nav.text-nav {
   width: 100%;
   height: 100px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -50,9 +53,9 @@
   color: #000;
 }
 .pokedex .container-title {
-  width: 100%;
-  max-width: 600px;
-  height: 100px;
+  width: 80%;
+  max-width: 500px;
+  height: 50px;
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
@@ -62,13 +65,13 @@
   border-bottom: none;
 }
 .pokedex .container-title div.container__div-circles {
-  width: 200px;
-  height: 80px;
+  width: 80px;
+  height: 30px;
   position: relative;
 }
 .pokedex .container-title div.container__div-circles a:first-child {
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   background-color: white;
   border-radius: 50%;
   border: 2px solid black;
@@ -76,12 +79,12 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 15px;
-  left: 60px;
+  top: 5px;
+  left: 30px;
 }
 .pokedex .container-title div.container__div-circles a:first-child div {
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   background-color: blue;
   border-radius: 50%;
   position: absolute;
@@ -90,54 +93,54 @@
   transform: translate(-50%, -50%);
 }
 .pokedex .container-title div.container__div-circles div:nth-child(2) {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background-color: red;
   border-radius: 50%;
   border: 1px solid black;
   position: absolute;
-  top: 15px;
-  left: 160px;
+  top: 5px;
+  left: 70px;
 }
 .pokedex .container-title div.container__div-circles div:nth-child(3) {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background-color: yellow;
   border-radius: 50%;
   border: 1px solid black;
   position: absolute;
-  top: 15px;
-  left: 200px;
+  top: 5px;
+  left: 90px;
 }
 .pokedex .container-title div.container__div-circles div:last-child {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background-color: green;
   border-radius: 50%;
   border: 1px solid black;
   position: absolute;
-  top: 15px;
-  left: 240px;
+  top: 5px;
+  left: 110px;
 }
 .pokedex .container-title .title {
   display: none;
 }
 .pokedex .containerName {
-  width: 100%;
-  max-width: 600px;
+  width: 80%;
+  max-width: 500px;
   margin: -50px auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-around;
+  gap: 20px;
   align-items: center;
   background-color: rgba(53, 53, 53, 0.7490196078);
-  padding: 100px 0;
+  padding: 30px 0;
   border: 2px solid #000;
 }
 .pokedex .containerName > div:first-child {
-  width: 350px;
-  height: 100px;
+  width: 200px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,11 +163,11 @@
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  border: 3px solid rgb(213, 163, 0);
+  border: none;
   outline: none;
-  background-color: #353535;
+  background-color: #fff;
   padding-left: 20px;
-  color: #fff;
+  color: #f00;
   font-size: 16px;
   font-weight: bold;
 }
@@ -173,12 +176,17 @@
   height: 50px;
   border-radius: 50%;
   outline: none;
-  border: 3px solid rgb(213, 163, 0);
-  background-color: #353535;
+  border: none;
+  background-color: #000;
   cursor: pointer;
   color: #fff;
   font-size: 10px;
   font-weight: bold;
+  transition: all ease 1s;
+}
+.pokedex .containerName div:nth-child(2) button:hover {
+  box-shadow: inset 0 100px 0 0 #d3d3d3;
+  color: #f00;
 }
 .pokedex .containerName div:nth-child(3) {
   width: 350px;
@@ -211,10 +219,11 @@
   padding-bottom: 20px;
 }
 .pokedex .containerName > a {
-  color: rgb(213, 163, 0);
+  color: rgb(203, 0, 0);
   text-decoration: none;
   font-size: 16px;
-  background-color: rgba(0, 0, 0, 0.3137254902);
+  font-weight: bold;
+  background-color: #fff;
   width: 150px;
   height: 50px;
   border-radius: 15px;
@@ -241,7 +250,7 @@
 .types nav.text-nav {
   width: 100%;
   height: 100px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -288,7 +297,7 @@
   justify-content: flex-start;
   gap: 30px;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(255, 255, 255);
   padding: 20px 30px;
 }
 .types .containerType > div:first-child button {
@@ -327,11 +336,11 @@
 }
 .types .containerType > div:first-child button:hover > span {
   transform: scale(100%);
-  color: #fff;
+  color: #000;
 }
 .types .containerType > .pokedex-type {
   margin: 10px auto 0;
-  width: 100%;
+  width: 80%;
   overflow-y: scroll;
   padding: 30px 30px;
   display: flex;
@@ -348,7 +357,9 @@
   justify-content: flex-start;
   gap: 20px;
   align-items: center;
-  background-color: rgba(53, 53, 53, 0.5529411765);
+  background-image: url("../assets/bg-index.gif");
+  background-position: center;
+  background-size: cover;
   border-radius: 20px;
   padding: 20px 0;
   color: #fff;
@@ -394,12 +405,10 @@
 .types .containerType button.remove-list img {
   width: 150px;
   height: 150px;
-  filter: grayscale(100%);
   transition: all ease 1s;
 }
 .types .containerType button.remove-list img:hover {
   animation: rotate-pokeball 2s ease-in-out;
-  filter: grayscale(0%);
 }
 @keyframes rotate-pokeball {
   to {
@@ -419,7 +428,7 @@ main.main-games {
 main.main-games nav.text-nav {
   width: 100%;
   height: 100px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -457,7 +466,7 @@ main.main-games button.btn-guess__game {
   margin-top: 50px;
   margin-bottom: 50px;
   border-radius: 25px;
-  background-color: rgba(53, 53, 53, 0.7490196078);
+  background-color: rgb(203, 0, 0);
   border: none;
   outline: none;
   color: #fff;
@@ -481,19 +490,24 @@ main.main-games div.container-guess__game {
 }
 main.main-games div.container-guess__game div {
   width: 90%;
-  max-width: 350px;
+  max-width: 300px;
   border-radius: 10px;
-  background-color: rgba(53, 53, 53, 0.7490196078);
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 15px;
   align-items: center;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   padding: 50px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  box-shadow: 15px 15px 20px 0px #ff0000;
+  background-image: url("../assets/bg-index.gif");
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
 }
 main.main-games div.container-guess__game div.container-clues > p {
   width: 100%;
@@ -504,13 +518,16 @@ main.main-games div.container-guess__game div.container-input__answer {
   flex-direction: column;
   justify-content: center;
   gap: 50px;
+  background-image: url("../assets/bg-index.gif");
+  background-position: center;
+  background-size: cover;
 }
 main.main-games div.container-guess__game div.container-input__answer > input {
   width: 80%;
   height: 50px;
   border: none;
   outline: none;
-  background-color: rgba(211, 211, 211, 0.5137254902);
+  background-color: rgb(0, 0, 0);
   border-radius: 20px;
   padding: 0 30px;
   font-size: 20px;
@@ -520,12 +537,18 @@ main.main-games div.container-guess__game div.container-input__answer > input {
 main.main-games div.container-guess__game div.container-input__answer > button {
   width: 40%;
   height: 30px;
-  background-color: rgba(211, 211, 211, 0.5137254902);
+  background-color: #000;
   border-radius: 20px;
   font-weight: bold;
   border: none;
   outline: none;
   cursor: pointer;
+  color: #fff;
+}
+main.main-games div.container-guess__game div.container-guessed {
+  background-image: url("../assets/bg-index.gif");
+  background-position: center;
+  background-size: cover;
   color: #fff;
 }
 main.main-games div.container-guess__game div.container-guessed img {
@@ -538,7 +561,7 @@ main.main-games button.btn-battle__game {
   margin-top: 50px;
   margin-bottom: 50px;
   border-radius: 25px;
-  background-color: rgba(53, 53, 53, 0.7490196078);
+  background-color: rgb(203, 0, 0);
   border: none;
   outline: none;
   color: #fff;
@@ -561,25 +584,35 @@ main.main-games div.container-battle__game {
 }
 main.main-games div.container-battle__game > div {
   width: 300px;
-  background-color: rgba(53, 53, 53, 0.7490196078);
+  background-color: #fff;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   color: #fff;
+  box-shadow: 15px 15px 20px 0px #ff0000;
+  background-image: url("../assets/bg-index.gif");
+  background-position: center;
+  background-size: cover;
 }
 main.main-games div.container-battle__game > div img {
   width: 200px;
   height: 200px;
 }
 main.main-games div.container-battle__game > div > h2 {
-  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
 }
 main.main-games div.container-battle__game > div > ul {
-  padding-bottom: 30px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 10px;
 }
 main.main-games div.container-battle__game > div > input {
   margin: 30px 0;
@@ -587,7 +620,7 @@ main.main-games div.container-battle__game > div > input {
   outline: none;
   height: 30px;
   border-radius: 20px;
-  background-color: rgba(157, 156, 156, 0.7490196078);
+  background-color: rgba(0, 0, 0, 0.7490196078);
   color: #fff;
   padding-left: 30px;
   font-size: 20px;
@@ -600,7 +633,7 @@ main.main-games div.container-battle__game > div > button:nth-child(2) {
   width: 80px;
   height: 30px;
   border-radius: 20px;
-  background-color: rgba(157, 156, 156, 0.7490196078);
+  background-color: rgba(0, 0, 0, 0.7490196078);
   color: #fff;
   font-weight: bold;
   cursor: pointer;
@@ -645,14 +678,11 @@ body.body-all {
   justify-content: flex-start;
   align-items: center;
   gap: 50px;
-  background-image: url(../assets/bg-index.gif);
-  background-size: cover;
-  background-position: top;
 }
 body.body-all nav.text-nav {
   width: 100%;
   height: 100px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -691,7 +721,7 @@ body.body-all > button {
   border-radius: 20px;
   border: none;
   outline: none;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   color: #fff;
@@ -721,7 +751,9 @@ body.body-all > main.main-all > div.each-card {
   gap: 20px;
   align-items: flex-start;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url("../assets/bg-index.gif");
+  background-position: center;
+  background-size: cover;
   border-radius: 20px;
   padding: 20px;
   -webkit-backdrop-filter: blur(5px);
@@ -782,7 +814,7 @@ body.body-all > main.main-all > div.each-card:hover > div.hidden-info > ul {
 footer {
   width: 100%;
   height: 100px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(0, 0, 0);
   position: fixed;
   bottom: 0;
   overflow-x: hidden;
@@ -819,20 +851,17 @@ footer > ul > li:hover {
   transform: scale(130%);
 }
 
-body {
+main.main-index {
+  width: 100%;
+  height: 100vh;
   background-image: url("../assets/bg-index.gif");
   background-position: center;
   background-size: cover;
 }
-
-main.main-index {
-  width: 100%;
-  height: 100vh;
-}
 main.main-index nav.text-nav {
   width: 100%;
   height: 10vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -881,7 +910,7 @@ main.main-index nav.images-nav ul {
 main.main-index nav.images-nav ul li {
   width: 200px;
   height: 200px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0);
   border-radius: 25px;
   box-shadow: 5px 5px 15px 5px #000000;
   display: flex;
@@ -900,7 +929,10 @@ main.main-index nav.images-nav ul li a img {
   filter: grayscale(100%);
 }
 main.main-index nav.images-nav ul li:hover {
-  transform: scale(150%);
+  transform: scale(120%);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 10px 0px #ff0000;
+  border-radius: 50%;
 }
 main.main-index nav.images-nav ul li:hover img {
   filter: grayscale(0%);

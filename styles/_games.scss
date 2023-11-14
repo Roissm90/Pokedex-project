@@ -11,7 +11,7 @@ main.main-games {
     nav.text-nav {
         width: 100%;
         height: 100px;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0);
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -53,7 +53,7 @@ main.main-games {
         margin-top: 50px;
         margin-bottom: 50px;
         border-radius: 25px;
-        background-color: #353535bf;
+        background-color: rgb(203, 0, 0);
         border: none;
         outline: none;
         color: #fff;
@@ -79,18 +79,23 @@ main.main-games {
 
         div {
             width: 90%;
-            max-width: 350px;
+            max-width: 300px;
             border-radius: 10px;
-            background-color: #353535bf;
+            background-color: #fff;
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 15px;
             align-items: center;
-            color: #fff;
+            color: rgb(255, 255, 255);
             font-weight: bold;
             padding: 50px;
             backdrop-filter: blur(10px);
+            box-shadow: 15px 15px 20px 0px #ff0000;
+            background-image: url('../assets/bg-index.gif');
+            background-position: center;
+            background-size: cover;
+            padding: 10px;
         }
 
         div.container-clues {
@@ -106,12 +111,16 @@ main.main-games {
             justify-content: center;
             gap: 50px;
 
+            background-image: url('../assets/bg-index.gif');
+            background-position: center;
+            background-size: cover;
+
             > input {
                 width: 80%;
                 height: 50px;
                 border: none;
                 outline: none;
-                background-color: #d3d3d383;
+                background-color: rgb(0, 0, 0);
                 border-radius: 20px;
                 padding: 0 30px;
                 font-size: 20px;
@@ -122,7 +131,7 @@ main.main-games {
             > button {
                 width: 40%;
                 height: 30px;
-                background-color: #d3d3d383;
+                background-color: #000;
                 border-radius: 20px;
                 font-weight: bold;
                 border: none;
@@ -133,6 +142,10 @@ main.main-games {
         }
 
         div.container-guessed {
+            background-image: url('../assets/bg-index.gif');
+            background-position: center;
+            background-size: cover;
+            color: #fff;
 
             img {
                 width: 200px;
@@ -147,7 +160,7 @@ main.main-games {
         margin-top: 50px;
         margin-bottom: 50px;
         border-radius: 25px;
-        background-color: #353535bf;
+        background-color: rgb(203, 0, 0);
         border: none;
         outline: none;
         color: #fff;
@@ -172,14 +185,17 @@ main.main-games {
 
         > div {
             width: 300px;
-            background-color: #353535bf;
+            background-color: #fff;
             border-radius: 20px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            backdrop-filter: blur(10px);
             color: #fff;
+            box-shadow: 15px 15px 20px 0px #ff0000;
+            background-image: url('../assets/bg-index.gif');
+            background-position: center;
+            background-size: cover;
 
             img {
                 width: 200px;
@@ -187,11 +203,19 @@ main.main-games {
             }
             
             > h2 {
-                padding-top: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 10px;
             }
 
             > ul {
-                padding-bottom: 30px;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-bottom: 10px;
             }
 
             > input {
@@ -200,7 +224,7 @@ main.main-games {
                 outline: none;
                 height: 30px;
                 border-radius: 20px;
-                background-color: #9d9c9cbf;
+                background-color: #000000bf;
                 color: #fff;
                 padding-left: 30px;
                 font-size: 20px;
@@ -214,7 +238,7 @@ main.main-games {
                 width: 80px;
                 height: 30px;
                 border-radius: 20px;
-                background-color: #9d9c9cbf;
+                background-color: #000000bf;
                 color: #fff;
                 font-weight: bold;
                 cursor: pointer;
