@@ -8,6 +8,14 @@ const baseUrl = 'https://pokeapi.co/api/v2/pokemon/';
 const numberOfPokemon = 151;
 
 searchName.addEventListener('click', pokedexName);
+inputName.addEventListener('keypress', comproveEnter);
+
+function comproveEnter(e) {
+    console.log(e);
+    if (e.keyCode === 13) {
+        pokedexName();
+    }
+}
 
 async function pokedexName(){
     const valueInputName = inputName.value.toLowerCase();

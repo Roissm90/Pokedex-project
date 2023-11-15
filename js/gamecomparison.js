@@ -100,6 +100,14 @@ async function selectFighter() {
     getInfoFighterTwo(result);
 }
 btnToSelectFighter$$.addEventListener('click', selectFighter);
+inputFighterTwo$$.addEventListener('keypress', comproveEnter);
+
+function comproveEnter(e) {
+    console.log(e);
+    if (e.keyCode === 13) {
+        selectFighter();
+    }
+}
 
 function getInfoFighterTwo(result) {
     totalStatsSelected = 0;
