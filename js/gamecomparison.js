@@ -1,4 +1,3 @@
-
 const btnToBattle$$ = document.getElementById('btnToBattleGame');
 const divBattle$$ = document.getElementById('divBattleGame');
 const inputFighterTwo$$ = document.createElement('input');
