@@ -732,20 +732,21 @@ body.body-all > button:hover {
 }
 body.body-all > main.main-all {
   width: 95%;
-  height: 400px;
+  height: 500px;
   overflow-y: scroll;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  margin-bottom: 120px;
+  padding: 20px 0;
 }
 body.body-all > main.main-all > div.each-card {
   width: 200px;
+  height: 160px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 20px;
   align-items: flex-start;
   color: #fff;
@@ -754,23 +755,15 @@ body.body-all > main.main-all > div.each-card {
   background-size: cover;
   border-radius: 20px;
   padding: 20px;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
   transition: all ease 1s;
-  transform: scaleY(30%);
   box-shadow: 5px 5px 15px 5px #000000;
-}
-body.body-all > main.main-all > div.each-card:hover {
-  transition: all ease 1s;
-  transform: scaleY(100%);
-}
-body.body-all > main.main-all > div.each-card:hover > img {
-  filter: blur(0px);
+  position: relative;
 }
 body.body-all > main.main-all > div.each-card > img {
   align-self: center;
   width: 100px;
   height: 120px;
+  position: absolute;
 }
 body.body-all > main.main-all > div.each-card > div.hidden-info {
   width: 100%;
@@ -779,6 +772,8 @@ body.body-all > main.main-all > div.each-card > div.hidden-info {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 10px;
+  border-radius: 20px;
   transition: all ease 1s;
   transform: scaleY(0%);
 }
@@ -797,8 +792,11 @@ body.body-all > main.main-all > div.each-card:hover > div.hidden-info {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 2px solid #fff;
   transition: all ease 1s;
-  transform: scaleY(80%);
+  transform: scaleY(100%);
 }
 body.body-all > main.main-all > div.each-card:hover > div.hidden-info > ul {
   list-style: none;
@@ -826,26 +824,44 @@ footer > ul {
   padding: 0 50px;
   list-style: none;
 }
-footer > ul > li {
+footer > ul > li:first-child {
   width: 120px;
   height: 60px;
+  filter: grayscale(100%) invert(100%);
   transition: all ease 1s;
 }
-footer > ul > li > a {
+footer > ul > li:first-child > a {
   width: 100%;
   height: 100%;
 }
-footer > ul > li > a img {
+footer > ul > li:first-child > a img {
   width: 100%;
   height: 100%;
 }
-footer > ul > li:first-child {
+footer > ul > li:first-child:first-child {
   filter: grayscale(100%) invert(100%);
 }
-footer > ul > li:last-child {
+footer > ul > li:first-child:last-child {
   filter: invert(100%);
 }
-footer > ul > li:hover {
+footer > ul > li:first-child:hover {
+  transform: scale(130%);
+}
+footer > ul > li:last-child {
+  width: 162px;
+  height: 60px;
+  filter: invert(100%);
+  transition: all ease 1s;
+}
+footer > ul > li:last-child > a {
+  width: 100%;
+  height: 100%;
+}
+footer > ul > li:last-child > a img {
+  width: 100%;
+  height: 100%;
+}
+footer > ul > li:last-child:hover {
   transform: scale(130%);
 }
 
@@ -934,6 +950,12 @@ main.main-index nav.images-nav ul li:hover {
 }
 main.main-index nav.images-nav ul li:hover img {
   filter: grayscale(0%);
+}
+main.main-index nav.images-nav ul li:last-child a {
+  height: 82px;
+}
+main.main-index nav.images-nav ul li:last-child a img {
+  height: 82px;
 }
 
 @media screen and (max-width: 768px) {

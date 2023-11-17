@@ -18,9 +18,10 @@ footer {
         padding: 0 50px;
         list-style: none;
 
-        > li {
+        > li:first-child {
             width: 120px;
             height: 60px;
+            filter: grayscale(100%) invert(100%);
 
             transition: all ease 1s;
 
@@ -40,6 +41,28 @@ footer {
 
             &:last-child {
                 filter: invert(100%);
+            }
+
+            &:hover {
+                transform: scale(130%);
+            }
+        }
+
+        > li:last-child {
+            width: 162px;
+            height: 60px;
+            filter: invert(100%);
+
+            transition: all ease 1s;
+
+            > a {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
 
             &:hover {

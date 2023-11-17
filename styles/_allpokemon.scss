@@ -68,7 +68,7 @@ body.body-all {
 
     > main.main-all {
         width: 95%;
-        height: 400px;
+        height: 500px;
 
         overflow-y: scroll;
 
@@ -78,13 +78,14 @@ body.body-all {
         align-items: flex-start;
         gap: 40px;
 
-        margin-bottom: 120px;
+        padding: 20px 0;
 
         > div.each-card {
             width: 200px;
+            height: 160px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             gap: 20px;
             align-items: flex-start;
             color: #fff;
@@ -93,24 +94,15 @@ body.body-all {
             background-size: cover;
             border-radius: 20px;
             padding: 20px;
-            backdrop-filter: blur(5px);
             transition: all ease 1s;
-            transform: scaleY(30%);
             box-shadow: 5px 5px 15px 5px #000000;
-
-            &:hover {
-                transition: all ease 1s;
-                transform: scaleY(100%);
-
-                > img {
-                    filter: blur(0px);
-                }
-            }
+            position: relative;
 
             > img {
                 align-self: center;
                 width: 100px;
                 height: 120px;
+                position: absolute;
             }
 
             > div.hidden-info {
@@ -120,6 +112,8 @@ body.body-all {
                 justify-content: center;
                 align-items: center;
                 gap: 20px;
+                padding: 10px;
+                border-radius: 20px;
                 > ul {
                     list-style: none;
                     width: 100%;
@@ -139,6 +133,8 @@ body.body-all {
                 justify-content: center;
                 align-items: center;
                 gap: 20px;
+                backdrop-filter: blur(10px);
+                border: 2px solid #fff;
                 > ul {
                     list-style: none;
                     width: 100%;
@@ -148,7 +144,7 @@ body.body-all {
                     align-items: center;
                 }
                 transition: all ease 1s;
-                transform: scaleY(80%);
+                transform: scaleY(100%);
             }
         }
     }

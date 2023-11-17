@@ -106,6 +106,16 @@ main.main-index {
                         filter: grayscale(0%);
                     }
                 }
+
+                &:last-child {
+                    a {
+                        height: 82px;
+
+                        img {
+                            height: 82px;
+                        }
+                    }
+                }
             }
         }
     }
